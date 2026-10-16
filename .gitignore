@@ -1,0 +1,28 @@
+# Gradle
+.gradle/
+**/build/
+
+# Android Studio
+.idea/
+*.iml
+
+# Local Android SDK configuration
+local.properties
+
+# Native/generated files
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Generated release output
+**/release/
+
+# Generated APK/AAB
+*.apk
+*.aab
+
+# OS
+.DS_Store
+Thumbs.db
+
+app/src/main/java/com/app/cookwise
