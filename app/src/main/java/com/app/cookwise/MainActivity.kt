@@ -17,10 +17,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CookwiseTheme {
+                val isDark = isSystemInDarkTheme()
                 Surface (
                     modifier = Modifier.fillMaxSize(),
-                    color = if (isSystemInDarkTheme()) Color(bgDark) else Color(bgLight),
-                    contentColor = if (isSystemInDarkTheme()) Color(fgDark) else Color(fgLight)
+                    color = if (isDark) Color(bgDark) else Color(bgLight),
+                    contentColor = if (isDark) Color(fgDark) else Color(fgLight)
                 ) {
                     App()
                 }
