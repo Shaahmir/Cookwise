@@ -12,7 +12,7 @@ The project is also a hands-on learning exercise in building a modern Android UI
 - **Cuisine and category** - see a meal's cuisine and category alongside its name.
 - **Food photography** - display recipe thumbnails loaded from their image URLs.
 - **Video tutorials** - open the recipe's YouTube tutorial; when a direct tutorial URL isn't available, Cookwise searches YouTube for the meal.
-- **Minimal interface** - a focused, single-screen browsing experience with clear typography and rounded recipe imagery.
+- **Minimal interface** - a focused, multi-screen browsing experience with clear typography and rounded recipe imagery.
 - **Light and dark appearance** - adapts to the device theme, with dynamic color support on compatible Android versions.
 - **Loading and empty states** - show feedback while meals load and when a search has no results.
 
@@ -52,7 +52,10 @@ Cookwise/
 │       ├── AndroidManifest.xml
 │       ├── java/com/app/cookwise/
 │       │   ├── MainActivity.kt       # Activity and Compose entry point
-│       │   ├── App.kt                # Recipe list, search UI, cards, and details dialog
+│       │   ├── App.kt                # Main application composable
+│       │   ├── HomeScreen.kt         # Recipe list, search UI, and recipe cards
+│       │   ├── DetailScreen.kt       # Detailed recipe view, ingredients, and instructions
+│       │   ├── Screen.kt             # Navigation routes and screen definitions
 │       │   ├── AppViewModel.kt       # Recipe fetching, search, and UI state
 │       │   ├── ApiService.kt         # Retrofit setup and API endpoints
 │       │   ├── RecipeResponse.kt     # Recipe and API response data classes
@@ -104,12 +107,6 @@ cd Cookwise
 
 ```bash
 ./gradlew assembleDebug
-```
-
-The debug APK is generated at:
-
-```text
-app/build/outputs/apk/debug/app-debug.apk
 ```
 
 ## What This Project Practices
